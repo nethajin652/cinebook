@@ -1,0 +1,370 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rose-50: var(--theme-primary-50);
+  --color-rose-100: var(--theme-primary-100);
+  --color-rose-200: var(--theme-primary-200);
+  --color-rose-300: var(--theme-primary-300);
+  --color-rose-400: var(--theme-primary-400);
+  --color-rose-500: var(--theme-primary-500);
+  --color-rose-600: var(--theme-primary-600);
+  --color-rose-700: var(--theme-primary-700);
+  --color-rose-800: var(--theme-primary-800);
+  --color-rose-900: var(--theme-primary-900);
+  --color-rose-950: var(--theme-primary-950);
+
+  --color-amber-400: var(--theme-secondary-400);
+  --color-amber-500: var(--theme-secondary-500);
+  --color-amber-600: var(--theme-secondary-600);
+}
+
+@layer base {
+  /* Default Rose Theme (Pink / Magenta / Rose) */
+  :root,
+  [data-theme="rose"] {
+    --theme-primary-50: #fff1f2;
+    --theme-primary-100: #ffe4e6;
+    --theme-primary-200: #fecdd3;
+    --theme-primary-300: #fda4af;
+    --theme-primary-400: #fb7185;
+    --theme-primary-500: #f43f5e;
+    --theme-primary-600: #e11d48;
+    --theme-primary-700: #be123c;
+    --theme-primary-800: #9f1239;
+    --theme-primary-900: #881337;
+    --theme-primary-950: #4c0519;
+
+    --theme-secondary-400: #f472b6;
+    --theme-secondary-500: #db2777;
+    --theme-secondary-600: #be185d;
+
+    --theme-accent-300: #fecdd3;
+    --theme-accent-400: #fb7185;
+    --theme-accent-500: #f43f5e;
+
+    --brand-red: #f84464;
+    --brand-dark: #0b0c10;
+    --brand-card: #191b26;
+    --brand-border: #2c2f3e;
+
+    --theme-bg-dark: #0b0c10;
+    --theme-header-bg: #0d0e15;
+    --theme-glow: linear-gradient(90deg, transparent, #db2777, #f43f5e, #fb7185, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(244, 63, 94, 0.4), 0 2px 10px rgba(219, 39, 119, 0.3);
+  }
+
+  /* 1. Ocean Blue Theme (Blue / Cyan / Light Blue) */
+  [data-theme="ocean-blue"] {
+    --theme-primary-50: #eff6ff;
+    --theme-primary-100: #dbeafe;
+    --theme-primary-200: #bfdbfe;
+    --theme-primary-300: #93c5fd;
+    --theme-primary-400: #60a5fa;
+    --theme-primary-500: #2563eb;
+    --theme-primary-600: #1d4ed8;
+    --theme-primary-700: #1e40af;
+    --theme-primary-800: #1e3a8a;
+    --theme-primary-900: #172554;
+    --theme-primary-950: #0b132b;
+
+    --theme-secondary-400: #22d3ee;
+    --theme-secondary-500: #06b6d4;
+    --theme-secondary-600: #0891b2;
+
+    --theme-accent-300: #bae6fd;
+    --theme-accent-400: #38bdf8;
+    --theme-accent-500: #0ea5e9;
+
+    --brand-red: #2563eb;
+    --brand-dark: #070d18;
+    --brand-card: #0e172a;
+    --brand-border: #1e293b;
+
+    --theme-bg-dark: #070d18;
+    --theme-header-bg: #09101f;
+    --theme-glow: linear-gradient(90deg, transparent, #06b6d4, #2563eb, #38bdf8, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(37, 99, 235, 0.4), 0 2px 10px rgba(6, 182, 212, 0.3);
+  }
+
+  /* 2. Royal Purple Theme (Purple / Violet / Lavender) */
+  [data-theme="royal-purple"] {
+    --theme-primary-50: #faf5ff;
+    --theme-primary-100: #f3e8ff;
+    --theme-primary-200: #e9d5ff;
+    --theme-primary-300: #d8b4fe;
+    --theme-primary-400: #c084fc;
+    --theme-primary-500: #9333ea;
+    --theme-primary-600: #7e22ce;
+    --theme-primary-700: #6b21a8;
+    --theme-primary-800: #581c87;
+    --theme-primary-900: #3b0764;
+    --theme-primary-950: #240046;
+
+    --theme-secondary-400: #a78bfa;
+    --theme-secondary-500: #8b5cf6;
+    --theme-secondary-600: #7c3aed;
+
+    --theme-accent-300: #f3e8ff;
+    --theme-accent-400: #e9d5ff;
+    --theme-accent-500: #c084fc;
+
+    --brand-red: #9333ea;
+    --brand-dark: #0d0818;
+    --brand-card: #181128;
+    --brand-border: #2e1d4d;
+
+    --theme-bg-dark: #0d0818;
+    --theme-header-bg: #110b20;
+    --theme-glow: linear-gradient(90deg, transparent, #8b5cf6, #9333ea, #d8b4fe, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(147, 51, 234, 0.4), 0 2px 10px rgba(139, 92, 246, 0.3);
+  }
+
+  /* 3. Emerald Theme (Emerald Green / Teal / Mint) */
+  [data-theme="emerald"] {
+    --theme-primary-50: #ecfdf5;
+    --theme-primary-100: #d1fae5;
+    --theme-primary-200: #a7f3d0;
+    --theme-primary-300: #6ee7b7;
+    --theme-primary-400: #34d399;
+    --theme-primary-500: #059669;
+    --theme-primary-600: #047857;
+    --theme-primary-700: #065f46;
+    --theme-primary-800: #064e3b;
+    --theme-primary-900: #022c22;
+    --theme-primary-950: #011c15;
+
+    --theme-secondary-400: #2dd4bf;
+    --theme-secondary-500: #0d9488;
+    --theme-secondary-600: #0f766e;
+
+    --theme-accent-300: #a7f3d0;
+    --theme-accent-400: #6ee7b7;
+    --theme-accent-500: #34d399;
+
+    --brand-red: #059669;
+    --brand-dark: #07130f;
+    --brand-card: #0e201b;
+    --brand-border: #1b3830;
+
+    --theme-bg-dark: #07130f;
+    --theme-header-bg: #0a1b15;
+    --theme-glow: linear-gradient(90deg, transparent, #0d9488, #059669, #34d399, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(5, 150, 105, 0.4), 0 2px 10px rgba(13, 148, 136, 0.3);
+  }
+
+  /* 4. Sunset Theme (Orange / Red / Gold) */
+  [data-theme="sunset"] {
+    --theme-primary-50: #fff7ed;
+    --theme-primary-100: #ffedd5;
+    --theme-primary-200: #fed7aa;
+    --theme-primary-300: #fdba74;
+    --theme-primary-400: #fb923c;
+    --theme-primary-500: #ea580c;
+    --theme-primary-600: #c2410c;
+    --theme-primary-700: #9a3412;
+    --theme-primary-800: #7c2d12;
+    --theme-primary-900: #431407;
+    --theme-primary-950: #2d0b04;
+
+    --theme-secondary-400: #f87171;
+    --theme-secondary-500: #dc2626;
+    --theme-secondary-600: #b91c1c;
+
+    --theme-accent-300: #fde047;
+    --theme-accent-400: #facc15;
+    --theme-accent-500: #eab308;
+
+    --brand-red: #ea580c;
+    --brand-dark: #140905;
+    --brand-card: #22120b;
+    --brand-border: #3b1e15;
+
+    --theme-bg-dark: #140905;
+    --theme-header-bg: #1a0c07;
+    --theme-glow: linear-gradient(90deg, transparent, #dc2626, #ea580c, #facc15, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(234, 88, 12, 0.4), 0 2px 10px rgba(220, 38, 38, 0.3);
+  }
+
+  /* 5. Cyber Theme (Electric Blue / Cyan / Neon Purple) */
+  [data-theme="cyber"] {
+    --theme-primary-50: #eff6ff;
+    --theme-primary-100: #dbeafe;
+    --theme-primary-200: #bfdbfe;
+    --theme-primary-300: #93c5fd;
+    --theme-primary-400: #3b82f6;
+    --theme-primary-500: #0066ff;
+    --theme-primary-600: #0052cc;
+    --theme-primary-700: #003d99;
+    --theme-primary-800: #002e73;
+    --theme-primary-900: #001f4d;
+    --theme-primary-950: #00122e;
+
+    --theme-secondary-400: #22d3ee;
+    --theme-secondary-500: #00f0ff;
+    --theme-secondary-600: #06b6d4;
+
+    --theme-accent-300: #f0abfc;
+    --theme-accent-400: #e879f9;
+    --theme-accent-500: #b026ff;
+
+    --brand-red: #0066ff;
+    --brand-dark: #060914;
+    --brand-card: #0b1122;
+    --brand-border: #14203d;
+
+    --theme-bg-dark: #060914;
+    --theme-header-bg: #080d1c;
+    --theme-glow: linear-gradient(90deg, transparent, #00f0ff, #0066ff, #b026ff, transparent);
+    --theme-glow-shadow: 0 10px 25px rgba(0, 102, 255, 0.45), 0 2px 10px rgba(0, 240, 255, 0.35);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-bg-dark, #0b0c10);
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    border: none;
+    background-color: var(--theme-bg-dark, #0b0c10);
+    transition: background-color 300ms ease;
+  }
+
+  ::selection {
+    background-color: var(--theme-primary-500, #f43f5e);
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar with dynamic theme hover */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-dark, #0f1017);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2d3d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary-500, #f84464);
+}
+
+/* Cinema Screen Curved Bar Glow with dynamic theme gradient */
+.cinema-screen-glow {
+  height: 8px;
+  background: var(--theme-glow, linear-gradient(90deg, transparent, #38bdf8, #f84464, #38bdf8, transparent));
+  box-shadow: var(--theme-glow-shadow, 0 10px 25px rgba(248, 68, 100, 0.4), 0 2px 10px rgba(56, 189, 248, 0.3));
+  border-radius: 50%;
+  filter: blur(1px);
+  transition: all 400ms ease;
+}
+
+/* Ticket tear effect styling */
+.ticket-tear-left {
+  position: relative;
+}
+.ticket-tear-left::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: var(--theme-bg-dark, #0b0c10);
+  border-radius: 50%;
+  transition: background-color 300ms ease;
+}
+
+.ticket-tear-right {
+  position: relative;
+}
+.ticket-tear-right::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: var(--theme-bg-dark, #0b0c10);
+  border-radius: 50%;
+  transition: background-color 300ms ease;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(25, 27, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-dropdown {
+  background: rgba(18, 20, 29, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Print specific styles for ticket printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-ticket, #printable-ticket * {
+    visibility: visible;
+  }
+  #printable-ticket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #000 !important;
+    background: #fff !important;
+  }
+}
+
+/* Mobile responsive utility adjustments */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  img, video {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cinema-screen-glow {
+    height: 6px;
+  }
+}
